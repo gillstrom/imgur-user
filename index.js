@@ -1,5 +1,4 @@
 'use strict';
-//var condenseKeys = require('condense-keys');
 var got = require('got');
 
 module.exports = function (username, cb) {
