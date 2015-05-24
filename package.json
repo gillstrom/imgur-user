@@ -1,6 +1,6 @@
 {
   "name": "imgur-user",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Get the profile of an imgur user",
   "license": "MIT",
   "repository": "gillstrom/imgur-user",
