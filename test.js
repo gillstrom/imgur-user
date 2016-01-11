@@ -1,11 +1,8 @@
-'use strict';
-var test = require('ava');
-var imgurUser = require('./');
+import test from 'ava';
+import m from './';
 
-test('user', function (t) {
-	t.plan(3);
-
-	imgurUser('gillstrom', function (err, res) {
+test('user', t => {
+	m('gillstrom', function (err, res) {
 		t.assert(!err, err);
 		t.assert(typeof res === 'object');
 		t.assert(res.url === 'gillstrom');
