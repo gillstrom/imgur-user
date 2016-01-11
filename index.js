@@ -1,20 +1,15 @@
 'use strict';
 var got = require('got');
 
-module.exports = function (username, cb) {
-	if (!username || typeof username === 'function') {
+module.exports = function (str) {
+	if (!str) {
 		throw new Error('Username is required');
 	}
 
-	got.get('https://api.imgur.com/3/account/' + username, {
+	return got('https://api.imgur.com/3/account/' + str, {
 		json: true,
 		headers: {authorization: 'Client-ID cb65642c0a7a7a8'}
-	}, function (err, res) {
-		if (err) {
-			cb(err);
-			return;
-		}
-
-		cb(null, res.data);
+	}).then(function (res) {
+		return res.body.data;
 	});
 };

@@ -1,10 +1,9 @@
 import test from 'ava';
 import m from './';
 
-test('user', t => {
-	m('gillstrom', function (err, res) {
-		t.assert(!err, err);
-		t.assert(typeof res === 'object');
-		t.assert(res.url === 'gillstrom');
-	});
+test(async t => {
+	const data = await m('gillstrom');
+
+	t.is(typeof data, 'object');
+	t.is(data.url, 'gillstrom');
 });

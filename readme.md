@@ -13,9 +13,9 @@ $ npm install --save imgur-user
 ## Usage
 
 ```js
-var imgurUser = require('imgur-user');
+const imgurUser = require('imgur-user');
 
-imgurUser('gillstrom', function (err, res) {
+imgurUser('gillstrom').then(res => {
 	console.log(res);
 	/*
 	{ 

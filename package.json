@@ -20,12 +20,13 @@
   ],
   "keywords": [
     "api",
+    "get",
     "imgur",
     "profile",
     "user"
   ],
   "dependencies": {
-    "got": "^3.2.0"
+    "got": "^5.3.0"
   },
   "devDependencies": {
     "ava": "*",
